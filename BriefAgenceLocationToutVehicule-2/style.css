@@ -1,0 +1,522 @@
+/* Eléments principaux de la page */
+
+body
+{
+    /* background: url('images/fond_jaune.png'); */
+    background: url('images/background-vehicule.jpg') no-repeat;
+    background-size: cover;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #fff9f9;
+}
+
+#bloc_page
+{
+    width: 90%;
+    margin: auto;
+}
+
+/* Header */
+
+header
+{
+    background: url('images/separateur.png') repeat-x bottom;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#titre_principal
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#logo img
+{
+    width: 100px;
+    height: 50px;
+}
+
+header h1
+{
+    font-family: 'BallparkWeiner', serif;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 10px;
+}
+
+header h2
+{
+    font-family: Dayrom, serif;
+    font-size: 1.1em;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+/* Navigation */
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+}
+
+nav li
+{
+    margin-right: 15px;
+}
+
+nav a
+{
+    font-size: 1.3em;
+    color: #fff9f9;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    color: #760001;
+    border-bottom: 3px solid #760001;
+}
+
+section h1 {
+    text-align: center;
+}
+
+section #bold {
+    font-size: xx-large;
+}
+
+section h2 {
+    font-size: xx-large;
+}
+
+section div p {
+    font-size: small;
+}
+
+section table tr th label {
+    position: relative;
+    float: left;
+}
+
+section table tr td input {
+    width: 645px;
+    height: 33px;
+}
+
+section table tr td button {
+    width: 104px;
+    height: 40px;
+    color: white;
+    background-color: #169A5A;
+}
+
+section table tr td textarea {
+    width: 647px;
+    height: 110px;
+}
+
+section table tr th {
+    display: inline-block;
+    margin-bottom: 25px;
+    margin-top: 17px;
+    margin-right: 67px;
+}
+
+section table tr {
+
+}
+
+/* Bannière */
+.banniere_image
+{
+  margin: auto;
+  /* margin-top: auto;
+    margin-bottom: auto; */
+  /* margin-top: auto;
+  margin-bottom: auto; */
+  width: auto;
+  margin-top: 10px;
+  height: 100%;
+  border-radius: 43px;
+  /* background: url('images/vehicles/moto.jpg') no-repeat; */
+  position: relative;
+  /* box-shadow: 0px 4px 4px #1c1a19; */
+  margin-bottom: 157px;
+  display: flex;
+  justify-content: center;
+  /* align-items: end; */
+  flex-wrap: wrap;
+}
+
+#banniere_description
+{
+    position: absolute;
+    bottom: 0;
+    border-radius: 0px 0px 5px 5px;
+    width: 99.5%;
+    height: 33px;
+    padding-top: 15px;
+    padding-left: 4px;
+    background-color: rgba(24,24,24,0.8);
+    color: white;
+    font-size: 0.8em;
+}
+
+/* Footer */
+
+footer
+{
+    display: flex;
+    background:  url('images/ico_top.png') no-repeat top center, url('images/separateur.png') repeat-x top; /*, url('images/ombre.png') repeat-x top */
+    padding-top: 25px;
+    justify-content: space-between;
+}
+
+/*#separateur {
+    position: relative;
+    display: flex;
+    background:  url('images/ico_top.png') no-repeat top center, url('images/separateur.png') repeat-x top, url('images/ombre.png') repeat-x top;
+    padding-top: 25px;
+    justify-content: space-between;
+}*/
+
+footer p, footer ul
+{
+    font-size: 0.8em;
+}
+
+footer h1
+{
+    font-size: 1.1em;
+}
+
+#pages
+{
+    /* width: 31%; */
+}
+
+#pages a
+{
+    text-decoration: none;
+    color: #0deb3d;
+}
+
+#about
+{
+    width: 28%;
+}
+
+#listes_pages
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -12px;
+    color: #0deb3d;
+}
+
+#pages ul
+{
+    list-style-image: url('images/ico_liensexterne.png');
+    padding-left: 13px;
+}
+
+footer h3
+{
+    font-size: 1.1em;
+}
+
+#subscribe {
+    width: 25%;
+}
+button {
+  height: 37px;
+  width: 41px;
+}
+
+button img {
+  width: 20px;
+}
+
+#subscribe input{
+  width: 175px;
+  height: 32px;
+  border-radius: 4px;
+  margin-left: -8px;
+  max-width: 70%;
+}
+
+.slide_img {
+    height: -webkit-fill-available;
+}
+
+/* Automatic animated slide show without js */
+#slideset {
+   height: 10em;
+   position: relative;
+}
+
+#slideset > * {
+   visibility: hidden;
+   position: absolute;
+   top: 0;
+   animation: 20s autoplay1 infinite
+}
+
+@keyframes autoplay1 {
+  0% {visibility: visible}
+  33.33% {visibility: hidden}
+}
+
+#slideset > *:nth-child(1) {animation-delay: 0s}
+#slideset > *:nth-child(2) {animation-delay: 6s}
+#slideset > *:nth-child(3) {animation-delay: 12s}
+#slideset > *:nth-child(4) {animation-delay: 18s}
+#slideset > *:nth-child(5) {animation-delay: 24s}
+#sildeset > *:nth-child(6) {animation-delay: 30s};
+
+.slide_img img {
+    width: 751px;
+    height: 321px;
+    max-width: 100%;
+    max-height: 200%;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #fff;
+}
+
+/* pour la page Gallery */
+#vehicules h1 {
+    text-align: center;
+    font-size: xxx-large;
+}
+section h2 {
+    text-decoration: underline #169A5A;
+    text-underline-offset: 6px;
+}
+
+#motos, #compacts, #berlines, #utilitaires, #engins_chantier, #camions {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+main section div {
+    margin-bottom: 6px;
+    margin-right: 6px;
+}
+
+#citadines {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+/* Desktop pour la page Reservation */
+#start_reserve {
+    text-align: center;
+    font-family: 'Ballpark', serif;
+    font-style: italic;
+    font-size: xxx-large;
+    /* font-family: "Playfair Display",Arial,Helvetica,sans-serif; */
+}
+#estimation_prix {
+    height: 42px;
+    width: 191px;
+    color: white;
+    background: #169A5A;
+    border-radius: 27px;
+    border: none;
+}
+#duree_reservation{
+    width: 56px;
+    height: 18px;
+}
+
+
+/* Appliquer le resposive design : media queries */
+@media screen and (max-width: 700px){
+    #bloc_page {
+        width: auto;
+    }
+
+    nav{
+        width: auto;
+        text-align: left;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+
+    nav li{
+        padding-left: 4px;
+    }
+
+    nav a{
+        font-size: 1.1em;
+    }
+
+    nav a:hover{
+        border-bottom: 0;
+    }
+
+    #banniere_image{
+        /* display: none; */
+    }
+
+    section{
+        flex-direction: column;
+    }
+
+    article, aside{
+        width: auto;
+        margin-bottom: 15px;
+    }
+
+    #fleche_bulle{
+        display: none;
+    }
+
+    #photo_zozor img{
+        width: 110px;
+        float: right;
+        margin-left: 15px;
+    }
+
+    aside p:last-child{ /* last-child : dernière paragraphe dans 'aside' */
+        text-align: center;
+    }
+
+    footer
+    {
+        align-items: center;
+        flex-direction: column;
+        margin-top: 36px;
+    }
+
+    #about
+    {
+        width: 90%;
+    }
+
+    #pages
+    {
+        width: 90%;
+    }
+
+    #listes_pages ul
+    {
+      list-style-image: none;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+    }
+
+    #listes_pages li {
+      /*margin-right: 17%;*/
+    }
+
+    #subscribe {
+        width: auto;
+    }
+
+    .banniere_image {
+      margin-bottom: 10px;
+    }
+
+    .slide_img img {
+        width: 306px;
+        height: 153px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    #about, #pages, #subscribe {
+        text-align: center;
+    }
+
+    section table tr th {
+        display: none;
+        margin-bottom: 25px;
+        margin-top: 17px;
+        margin-right: 67px;
+    }
+    section table tr td input {
+        width: 284PX;
+        height: 37px;
+        max-width: 100%;
+    }
+    section table tr td textarea {
+        width: 286PX;
+        height: 110px;
+        max-width: 100%;
+    }
+    section table tr td button {
+        width: -webkit-fill-available;
+        height: 40px;
+        color: white;
+        background-color: #169A5A;
+    }
+
+    ::-webkit-input-placeholder { /* Edge */
+        color: lightgray !important;
+      }
+      
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: lightgray !important;
+      }
+      
+      ::placeholder {
+        color: lightgray !important;
+      }
+    
+    /* Responsive pour la page Gallery */
+    section {
+    text-align: center;
+    }
+    main section div {
+        margin-bottom: 4px;
+    }
+
+    /* Responsive pour la page Reservation */
+    #start_reserve {
+        /* text-align: center;
+        font-family: 'Ballpark', serif;
+        font-style: italic; */
+        /* font-family: "Playfair Display",Arial,Helvetica,sans-serif; */
+    }
+    #bloc_estimation_prix {
+        text-align: center;
+    }
+    #estimation_prix {
+        height: 42px;
+        width: 191px;
+        color: white;
+        background: #169A5A;
+        border-radius: 27px;
+        border: none;
+    }
+
+}
