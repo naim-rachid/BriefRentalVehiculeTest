@@ -7,6 +7,7 @@
     <title>Reservation</title>
 	<link rel="icon" type="text/css" href="images/logo-head.png">
     <link rel="stylesheet" href="style.css" />
+    <script src="script_reserve.js" defer></script>
 </head>
 <body>
     <div id="bloc_page">
@@ -33,104 +34,157 @@
             <br />
             <section id="bloc_form">
                 <form>
-                    <section id="boite_vitesse">
-                        <label for="btvts">Boite à vitesse : </label>
-                        <select name="btvts" id="btvts">
-                            <option value="moto">Moto</option>
-                            <option value="manuelle">Manuelle</option>
-                            <option value="automatique">Automatique</option>
-                        </select>
+                    <section id="liste_boite_vitesse">
+                        <div>
+                            <label for="boite_vitesse">Boite à vitesse : </label>
+                        </div>
+                        <div>
+                            <select name="boite_vitesse" id="boite_vitesse">
+                                <option id="vide" value="vide"></option>
+                                <option id="moto" value="moto">Moto</option>
+                                <option id="manuelle" value="manuelle">Manuelle</option>
+                                <option id="automatique" value="automatique">Automatique</option>
+                            </select>
+                        </div>
+                        <br />
+                        <br />
                     </section>
-                    <br />
-                    <br />
-                    <section id="liste_vehicule_pour_manuelle">
-                        <label for="type_vehicule_m">Type de véhicule manuelle : </label>
-                        <select name="type_vehicule" id="type_vehicule">
-                            <option value="citadine">Citadine</option>
-                            <option value="compact">Compact</option>
-                            <option value="utilitaire">Utilitaire</option>
-                            <option value="engin_chantier">Engin de Chantier</option>
-                        </select>
+                    <section id="liste_vehicule">
+                        <section id="liste_vehicule_pour_manuelle">
+                            <div>
+                                <label for="type_vehicule_m">Type de véhicule manuelle : </label>
+                            </div>
+                            <div>
+                                <select name="type_vehicule" id="type_vehicule_m">
+                                    <option value="citadine">Citadine</option>
+                                    <option value="compact">Compact</option>
+                                    <option value="utilitaire">Utilitaire</option>
+                                    <option value="engin_chantier">Engin de Chantier</option>
+                                </select>
+                            </div>
+                        </section>
+                        <br />
+                        <section id="liste_vehicule_pour_automatique">
+                            <div>
+                                <label for="type_vehicule_auto">Type de véhicule automatique : </label>
+                            </div>
+                            <div>
+                                <select name="type_vehicule" id="type_vehicule_auto">
+                                    <option value="berline">Berline</option>
+                                    <option value="camion">Camion</option>
+                                </select>
+                            </div>
+                        </section>
+                        <br />
+                        <br />
                     </section>
-                    <br />
-                    <section id="liste_vehicule_pour_automatique">
-                        <label for="type_vehicule_auto">Type de véhicule automatique : </label>
-                        <select name="type_vehicule" id="type_vehicule">
-                            <option value="berline">Berline</option>
-                            <option value="camion">Camion</option>
-                        </select>
-                    </section>
-                    <br />
-                    <br />
-                    <section id="liste_carburant_pour_moto">
-                        <label for="carburant_moto">Carburant de Moto : </label>
-                        <select name="carburant_moto" id="carburant_moto">
-                            <option value="electrique">Electrique</option>
-                            <option value="essence">Essence</option>
-                        </select>
-                    </section>
-                    <br />
-                    <section id="liste_carburant_pour_citadine">
-                        <label for="carburant_citadine">Carburant de Citadine: </label>
-                        <select name="carburant_citadine" id="carburant_citadine">
-                            <option value="electrique">Electrique</option>
-                            <option value="hybride">Hybride</option>
-                            <option value="essence">Essence</option>
-                            <option value="diesel">Diesel</option>
-                        </select>
-                    </section>
-                    <br />
-                    <section id="liste_carburant_pour_compact">
-                        <label for="carburant_compact">Carburant de Compact: </label>
-                        <select name="carburant_compact" id="carburant_compact">
-                            <option value="hybride">Hybride</option>
-                            <option value="essence">Essence</option>
-                            <option value="diesel">Diesel</option>
-                        </select>
-                    </section>
-                    <br />
-                    <section id="liste_carburant_pour_berline">
-                        <label for="carburant_berline">Carburant de Berline: </label>
-                        <select name="carburant_berline" id="carburant_berline">
-                            <option value="hybride">Hybride</option>
-                            <option value="essence">Essence</option>
-                            <option value="diesel">Diesel</option>
-                        </select>
-                    </section>
-                    <br />
-                    <section id="liste_carburant_pour_utilitaire">
-                        <label for="carburant_utilitaire">Carburant d'Utilitaire: </label>
-                        <select name="carburant_utilitaire" id="carburant_utilitaire">
-                            <option value="diesel">Diesel</option>
-                        </select>
-                    </section>
-                    <br />
-                    <section id="liste_carburant_pour_engin_chantier">
-                        <label for="engin_chantier">Carburant d'Engin de Chantier: </label>
-                        <select name="engin_chantier" id="engin_chantier">
-                            <option value="essence">Essence</option>
-                            <option value="diesel">Diesel</option>
-                        </select>
-                    </section>
-                    <br />
-                    <section id="liste_carburant_pour_camion">
-                        <label for="carburant_camion">Carburant de Camion: </label>
-                        <select name="carburant_camion" id="carburant_camion">
-                            <option value="diesel">Diesel</option>
-                        </select>
-                    </section>
-                    <br />
-                    <br />
+                    <section id="liste_carburant">
+                        <section id="liste_carburant_pour_moto">
+                            <div>
+                                <label for="carburant_moto">Carburant de Moto : </label>
+                            </div>
+                            <div>
+                                <select name="carburant_moto" id="carburant_moto">
+                                    <option value="electrique">Electrique</option>
+                                    <option value="essence">Essence</option>
+                                </select>
+                            </div>
+                        </section>
+                        <br />
+                        <section id="liste_carburant_pour_citadine">
+                            <div>
+                                <label for="carburant_citadine">Carburant de Citadine: </label>
+                            </div>
+                            <div>
+                                <select name="carburant_citadine" id="carburant_citadine">
+                                    <option value="electrique">Electrique</option>
+                                    <option value="hybride">Hybride</option>
+                                    <option value="essence">Essence</option>
+                                    <option value="diesel">Diesel</option>
+                                </select>
+                            </div>
+                        </section>
+                        <br />
+                        <section id="liste_carburant_pour_compact">
+                            <div>
+                                <label for="carburant_compact">Carburant de Compact: </label>
+                            </div>
+                            <div>    
+                                <select name="carburant_compact" id="carburant_compact">
+                                    <option value="hybride">Hybride</option>
+                                    <option value="essence">Essence</option>
+                                    <option value="diesel">Diesel</option>
+                                </select>
+                            </div>
+                        </section>
+                        <br />
+                        <section id="liste_carburant_pour_berline">
+                            <div>
+                                <label for="carburant_berline">Carburant de Berline: </label>
+                            </div>
+                            <div>
+                                <select name="carburant_berline" id="carburant_berline">
+                                    <option value="hybride">Hybride</option>
+                                    <option value="essence">Essence</option>
+                                    <option value="diesel">Diesel</option>
+                                </select>
+                            </div>
+                        </section>
+                        <br />
+                        <section id="liste_carburant_pour_utilitaire">
+                            <div>
+                                <label for="carburant_utilitaire">Carburant d'Utilitaire: </label>
+                            </div>
+                            <div>
+                                <select name="carburant_utilitaire" id="carburant_utilitaire">
+                                    <option value="diesel">Diesel</option>
+                                </select>
+                            </div>
+                        </section>
+                        <br />
+                        <section id="liste_carburant_pour_engin_chantier">
+                            <div>
+                                <label for="engin_chantier">Carburant d'Engin de Chantier: </label>
+                            </div>
+                            <div>
+                                <select name="engin_chantier" id="engin_chantier">
+                                    <option value="essence">Essence</option>
+                                    <option value="diesel">Diesel</option>
+                                </select>
+                            </div>
+                        </section>
+                        <br />
+                        <section id="liste_carburant_pour_camion">
+                            <div>
+                                <label for="carburant_camion">Carburant de Camion: </label>
+                            </div>
+                            <div>
+                                <select name="carburant_camion" id="carburant_camion">
+                                    <option value="diesel">Diesel</option>
+                                </select>
+                            </div>
+                        </section>
+                        <br />
+                        <br />
+                    </section>                    
                     <section id="nbr_jours_reservation">
-                        <label for="duree_reservation">Durée de reservation (en jours) : </label>
-                        <input type="number" name="duree_reservation" id="duree_reservation" min="1" maxlength="2"/>
+                        <div>
+                            <label for="duree_reservation">Durée de reservation (en jours) : </label>
+                        </div>
+                        <div>
+                            <input type="number" name="duree_reservation" id="duree_reservation" min="1" maxlength="2"/>
+                        </div>
+                        <br />
+                        <br />
                     </section>
-                    <br />
-                    <br />
-                    <div id="bloc_estimation_prix">
-                        <button id="estimation_prix"><b>Calculer l'estimation du prix</b></button>
+                    
+                    <section id="bloc_estimation_prix">
+                        <button type="submit" id="estimation_prix"><b>Calculer l'estimation du prix</b></button>
                         <!-- <input type="submit" name="estimation_prix" id="estimation_prix" value="Calculer l'estimation du prix"/> -->
-                    </div>
+                        <div id="result_estimation_prix">
+                        
+                        </div>
+                    </section>
                 </form>
             </section>
             <br />

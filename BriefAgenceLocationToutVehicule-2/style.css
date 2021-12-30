@@ -347,11 +347,44 @@ main section div {
     background: #169A5A;
     border-radius: 27px;
     border: none;
+    cursor: pointer;
 }
 #duree_reservation{
     width: 56px;
     height: 18px;
 }
+#liste_boite_vitesse, section#liste_vehicule section, #liste_carburant section, #nbr_jours_reservation {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-between;
+    flex-wrap: nowrap;
+}
+section#bloc_estimation_prix {
+    text-align  : center;
+}
+/* Cacher des blocs initialement */
+section#liste_vehicule {
+    display: none;
+}
+#liste_vehicule section#liste_vehicule_pour_manuelle, #liste_vehicule section#liste_vehicule_pour_automatique{
+    display: none;
+}
+section#liste_carburant {
+    display: none;
+}
+#liste_carburant section#liste_carburant_pour_moto, #liste_carburant section#liste_carburant_pour_citadine, #liste_carburant section#liste_carburant_pour_compact, #liste_carburant section#liste_carburant_pour_berline, #liste_carburant section#liste_carburant_pour_utilitaire, #liste_carburant section#liste_carburant_pour_engin_chantier, #liste_carburant section#liste_carburant_pour_camion {
+    display: none;
+}
+
+#nbr_jours_reservation, section#bloc_estimation_prix{
+    display: none;
+}
+
+
+/* section#liste_vehicule section#liste_vehicule_pour_manuelle {
+    display: block;
+} */
 
 
 /* Appliquer le resposive design : media queries */
@@ -494,7 +527,7 @@ main section div {
     
     /* Responsive pour la page Gallery */
     section {
-    text-align: center;
+        text-align: center;
     }
     main section div {
         margin-bottom: 4px;
@@ -511,12 +544,13 @@ main section div {
         text-align: center;
     }
     #estimation_prix {
-        height: 42px;
-        width: 191px;
+        height: 49px;
+        width: 209px;
         color: white;
         background: #169A5A;
-        border-radius: 27px;
+        border-radius: 23px;
         border: none;
+        cursor: pointer;
     }
 
 }
