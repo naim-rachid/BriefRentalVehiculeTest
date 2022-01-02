@@ -381,6 +381,11 @@ section#liste_carburant {
     display: none;
 }
 
+select {
+    width: 231px;
+    height: 33px;
+}
+
 
 /* section#liste_vehicule section#liste_vehicule_pour_manuelle {
     display: block;

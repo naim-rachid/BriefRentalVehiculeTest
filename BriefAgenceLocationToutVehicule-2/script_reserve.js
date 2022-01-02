@@ -17,20 +17,23 @@ boite_vitesse.addEventListener('change', function() {
     {
         console.log("boite à vitesse choisie = ", valeurSelectionnee);
         liste_carburant.style.display = 'block';
-        liste_carburant_pour_moto.style.display = 'block';
+        liste_carburant_pour_moto.style.display = 'flex';
         //
         liste_vehicule.style.display = 'none';
         liste_vehicule_pour_manuelle.style.display = 'none';
         liste_vehicule_pour_automatique.style.display = 'none';
         //
         listeCarburantPourCitadine.style.display = 'none';
+        listeCarburantPourCompact.style.display = 'none';
+        listeCarburantPourUtilitaire.style.display = 'none';
+        listeCarburantPourEnginChantier.style.display = 'none';
         console.log("listeCarburantPourCitadine.style.display = ", listeCarburantPourCitadine.style.display);
     }
     else if (valeurSelectionnee == "manuelle") // Afficher seulement le bloc de la liste vehicule pour manuelle
     {
         console.log("boite à vitesse choisie = ", valeurSelectionnee);
         liste_vehicule.style.display = 'block';
-        liste_vehicule_pour_manuelle.style.display = 'block';
+        liste_vehicule_pour_manuelle.style.display = 'flex';
         //
         liste_carburant.style.display = 'none';
         liste_carburant_pour_moto.style.display = 'none';
@@ -41,7 +44,7 @@ boite_vitesse.addEventListener('change', function() {
     {
         console.log("boite à vitesse choisie = ", valeurSelectionnee);
         liste_vehicule.style.display = 'block';
-        liste_vehicule_pour_automatique.style.display = 'block';
+        liste_vehicule_pour_automatique.style.display = 'flex';
         //
         liste_carburant.style.display = 'none';
         liste_carburant_pour_moto.style.display = 'none';
@@ -57,17 +60,20 @@ boite_vitesse.addEventListener('change', function() {
 //---
 const seclectElmtType_vehicule_m = document.querySelector('#type_vehicule_m');
 var listeCarburantPourCitadine;
+var listeCarburantPourCompact;
+var listeCarburantPourUtilitaire;
+var listeCarburantPourEnginChantier;
 seclectElmtType_vehicule_m.addEventListener('change', function(){
     // Les élément du bloc liste_carburant
     let liste_carburant = document.querySelector('#liste_carburant');
     // Les élément du bloc de 'liste des véhicules manuelle' pour Citadine
     listeCarburantPourCitadine = document.querySelector("#liste_carburant_pour_citadine");
     // Les élément du bloc de 'liste des véhicules manuelle' pour Compact
-    var listeCarburantPourCompact = document.querySelector("#liste_carburant_pour_compact");
+    listeCarburantPourCompact = document.querySelector("#liste_carburant_pour_compact");
     // Les élément du bloc de 'liste des véhicules manuelle' pour Utilitaire
-    var listeCarburantPourUtilitaire = document.querySelector("#liste_carburant_pour_utilitaire");
+    listeCarburantPourUtilitaire = document.querySelector("#liste_carburant_pour_utilitaire");
     // Les élément du bloc de 'liste des véhicules manuelle' pour Engin de Chantier
-    var listeCarburantPourEnginChantier = document.querySelector("#liste_carburant_pour_engin_chantier");
+    listeCarburantPourEnginChantier = document.querySelector("#liste_carburant_pour_engin_chantier");
 
     let valeurSelectionnee = seclectElmtType_vehicule_m.options[seclectElmtType_vehicule_m.selectedIndex].value;
     let textSelectionnee = seclectElmtType_vehicule_m.options[seclectElmtType_vehicule_m.selectedIndex].text;
@@ -75,7 +81,7 @@ seclectElmtType_vehicule_m.addEventListener('change', function(){
     if (valeurSelectionnee == "citadine") {
         console.log("Type de véhicule manuelle choisie - text = ", textSelectionnee);
         liste_carburant.style.display = 'block';
-        listeCarburantPourCitadine.style.display = 'block';
+        listeCarburantPourCitadine.style.display = 'flex';
         //
         listeCarburantPourCompact.style.display = 'none';
         listeCarburantPourUtilitaire.style.display = 'none';
@@ -84,7 +90,7 @@ seclectElmtType_vehicule_m.addEventListener('change', function(){
     else if (valeurSelectionnee == "compact") {
         console.log("Type de véhicule manuelle choisie - valeur = ", valeurSelectionnee);
         liste_carburant.style.display = 'block';
-        listeCarburantPourCompact.style.display = 'block';
+        listeCarburantPourCompact.style.display = 'flex';
         //
         listeCarburantPourCitadine.style.display = 'none';
         listeCarburantPourUtilitaire.style.display = 'none';
@@ -93,7 +99,7 @@ seclectElmtType_vehicule_m.addEventListener('change', function(){
     else if (valeurSelectionnee == "utilitaire") {
         console.log("Type de véhicule manuelle choisie - valeur = ", valeurSelectionnee);
         liste_carburant.style.display = 'block';
-        listeCarburantPourUtilitaire.style.display = 'block'
+        listeCarburantPourUtilitaire.style.display = 'flex'
         //
         listeCarburantPourCitadine.style.display = 'none';
         listeCarburantPourCompact.style.display = 'none';
@@ -102,7 +108,7 @@ seclectElmtType_vehicule_m.addEventListener('change', function(){
     else if (valeurSelectionnee == "engin_chantier") {
         console.log("Type de véhicule manuelle choisie - valeur = ", valeurSelectionnee);
         liste_carburant.style.display = 'block';
-        listeCarburantPourEnginChantier.style.display = 'block'
+        listeCarburantPourEnginChantier.style.display = 'flex'
         //
         listeCarburantPourCitadine.style.display = 'none';
         listeCarburantPourCompact.style.display = 'none';
@@ -113,7 +119,7 @@ seclectElmtType_vehicule_m.addEventListener('change', function(){
         listeCarburantPourUtilitaire.style.display = 'none';
         listeCarburantPourCompact.style.display = 'none';
         listeCarburantPourCitadine.style.display = 'none';
-        liste_carburant.style.display = 'none';
+        liste_carburant.style.display = 'block';
     }
 });
 
@@ -133,7 +139,7 @@ seclectElmtTypeVehiculeAuto.addEventListener('change', function(){
     {
         console.log("Type de véhicule auto choisie - valeur = ", valeurSelectionnee);
         liste_carburant.style.display = 'block';
-        listeCarburantPourBerline.style.display = 'block';
+        listeCarburantPourBerline.style.display = 'flex';
         //
         listeCarburantPourCamion.style.display = 'none';
     }
@@ -141,7 +147,7 @@ seclectElmtTypeVehiculeAuto.addEventListener('change', function(){
     {
         console.log("Type de véhicule auto choisie - valeur = ", valeurSelectionnee);
         liste_carburant.style.display = 'block';
-        listeCarburantPourCamion.style.display = 'block';
+        listeCarburantPourCamion.style.display = 'flex';
         //
         listeCarburantPourBerline.style.display = 'none';   
     }
@@ -149,7 +155,7 @@ seclectElmtTypeVehiculeAuto.addEventListener('change', function(){
         console.log("Type de véhicule auto choisie - valeur = ", valeurSelectionnee);
         listeCarburantPourCamion.style.display = 'none';
         listeCarburantPourBerline.style.display = 'none';   
-        liste_carburant.style.display = 'none';
+        liste_carburant.style.display = 'block';
     }
 });
 
@@ -167,7 +173,7 @@ seclectElmtTypeVehiculeAuto.addEventListener('change', function(){
 
 
     // liste_carburant.style.display = 'block';
-    // liste_carburant_pour_moto.style.display = 'block';
+    // liste_carburant_pour_moto.style.display = 'flex';
 
     // var style_carburant_moto = getComputedStyle('#liste_carburant_pour_moto');
     // liste_carburant_pour_moto.style.display = 'bloc';
